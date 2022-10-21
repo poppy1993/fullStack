@@ -45,13 +45,36 @@
 
 // 导入koa2
 const Koa = require("koa");
+const bodyParser = require('koa-bodyparser');
+const router = require('./routes/index');
+const mongoose = require('mongoose');
+
 // 创建一个Koa对象表示web app本身:
 const app = new Koa();
+
 // 对于任何请求，app将调用该异步函数处理请求：
-app.use(async (ctx, next) => {
-await next();
-ctx.response.type ='text/html';
-ctx.response.body ="<h1>Hello, koa2!</h1>";
+// app.use(async (ctx, next) => {
+//   await next();
+//   ctx.response.type ='text/html';
+//   ctx.response.body ="<h1>Hello, koa2!</h1>";
+// });
+
+const MONGODBURL = 'mongodb+srv://AlbertBird:qwerasdf@cluster0.wttcowf.mongodb.net/test';
+mongoose.connect(MONGODBURL);
+const database = mongoose.connection;
+
+database.on('error', (error) => {
+  console.log(error)
 });
-// 在端口3000监听:
-app.listen(3000);
+
+database.once('connected', () => {
+  console.log('Database Connected');
+});
+
+app.use(bodyParser());
+
+app
+  .use(router.routes())  //作用：启动路由
+  .use(router.allowedMethods());
+// 在端口3001监听:
+app.listen(3001);
