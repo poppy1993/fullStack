@@ -1,5 +1,6 @@
 const Router = require('koa-router');
 const Model = require('../models/model');
+const connection = require('../models/db');
 
 const router = new Router();
 
@@ -10,9 +11,15 @@ router.post('/create', async (ctx, next) => {
         price: body.price
     })
     try {
-        const dataToSave = await data.save();
-        // res.status(200).json(dataToSave)
-        ctx.body = dataToSave;
+        const addSql = `INSERT INTO item_info  (item_title, item_price, submit_date) VALUES ('${body.name}', ${body.price}, NOW());`;
+        // const addSql = 'INSERT INTO item_info  (item_title, item_price, submit_date) VALUES ("学习 雷锋", 123, NOW());';
+        console.log('addSql', addSql, connection);
+        const res = await connection.query(addSql);
+        console.log('res', res);
+        ctx.body = {
+            code: 0,
+            msg: '新增成功'
+        };
     } catch (error) {
         ctx.body = {
             message: error.message
@@ -60,8 +67,11 @@ router.post('/delete', async (ctx, next) => {
 //Get all Method
 router.get('/getAll', async (ctx, next) => {
     try{
-        const data = await Model.find();
-        ctx.body = data;
+        const querySql = 'SELECT * FROM item_info';
+        console.log('querySql', querySql);
+        const res = await connection.query(querySql);
+        console.log('res', res);
+        ctx.body = res;
     } catch(error){
         ctx.body = {
             message: error.message
