@@ -66,6 +66,15 @@ router.post('/delete', async (ctx, next) => {
 
 //Get all Method
 router.get('/getAll', async (ctx, next) => {
+    console.log('ctx.session', ctx.session);
+    const { email } = ctx.session;
+    if (!email) {
+        ctx.body = {
+            code: 3000,
+            message: '请登录'
+        };
+        next();
+    }
     try{
         const querySql = 'SELECT * FROM item_info';
         console.log('querySql', querySql);
