@@ -2,6 +2,8 @@ import React from 'react';
 import { Form, Input, Button } from 'antd';
 import './index.scss';
 
+const { TextArea } = Input;
+
 const formItemLayout = {
   labelCol: {
     xs: { span: 24 },
@@ -25,14 +27,12 @@ const SendMessage = () => {
       className="basic-info-form"
       initialValues={{
         username: 'AlbertBird',
-        email: 'xxxx',
-        phone: '12345',
-        account: 'aaaaa'
+        content: 'xxxx',
       }}
       {...formItemLayout}
       onFinish={onFinish}
     >
-      {/* <Form.Item
+      <Form.Item
         name="content"
         label="Content"
         labelAlign='right'
@@ -49,7 +49,7 @@ const SendMessage = () => {
           style={{ height: 120 }}
           placeholder="can resize"
         />
-      </Form.Item> */}
+      </Form.Item>
       <Form.Item
         name="username"
         label="UserName"
