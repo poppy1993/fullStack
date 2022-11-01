@@ -8,6 +8,16 @@ import BannerList from '../../component/BannerList';
 
 const { Panel } = Collapse;
 
+const ItemConfig = [{
+  tabKey: 'itemList',
+  componentName: <BasicInfo />,
+  title: 'Item List'
+}, {
+  tabKey: 'publishItem',
+  componentName: <BasicInfo />,
+  title: 'Publish Item'
+}];
+
 const AccountConfig = [{
   tabKey: 'basicInfo',
   componentName: <BasicInfo />,
@@ -62,9 +72,19 @@ const Main = () => {
               <div className='text'>My Items</div>
             </div>
           )} key="2">
-            <div className='item-option active'>
-              Basic Info
-            </div>
+            {
+              ItemConfig.map((item, index) => {
+                const { tabKey: key, componentName, title } = item;
+                return (
+                  <div key={key} className={`item-option ${tabKey === key ? 'active' : ''}`} onClick={() => {
+                    setTabKey(key);
+                    setShowComponent(componentName);
+                  }}>
+                    {title}
+                  </div>
+                )
+              })
+            }
           </Panel>
           <Panel header={(
             <div className='navbar'>
