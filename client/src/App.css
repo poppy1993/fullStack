@@ -7,6 +7,40 @@
   pointer-events: none;
 }
 
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+input {
+  outline: none;
+  border: none;
+  line-height: 32px;
+  padding-left: 12px;
+  border: 1px solid #ebebeb;
+}
+
+button {
+  line-height: 32px;
+  border: none;
+  color: #666;
+  padding: 0 10px;
+  padding-left: 12px;
+  background-color: #fff;
+  border: 1px solid #ebebeb;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
