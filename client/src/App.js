@@ -7,6 +7,7 @@ import {
 import Main from './page/Main';
 import Home from './page/Home';
 import Login from './page/Login';
+import './App.css';
 
 
 const App = () => {
