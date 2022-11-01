@@ -1,0 +1,56 @@
+.registerContainer {
+  background: #f5f5f5;
+  padding: 40px 0 80px;
+}
+
+.register {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 800px;
+  margin: 0 auto;
+}
+
+.r-title {
+  display: flex;
+  line-height: 40px;
+  border-bottom: 1px solid #ccc;
+  justify-content: space-between;
+}
+
+.r-tips {
+  font-size: 12px;
+}
+
+.register h2 {
+  text-align: left;
+  font-size: 20px;
+}
+
+.r-formWrap {
+  width: 400px;
+  margin: 20px auto;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.r-formLabel {
+  line-height: 32px;
+}
+
+.r-formItem {
+  width: 400px;
+}
+
+.register-info {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #666;
+}
+.register-btn {
+  display: block;
+  background: #333;
+  color: #fff;
+  margin: 10px auto 50px;
+  cursor: pointer;
+}
