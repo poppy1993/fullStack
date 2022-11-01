@@ -133,11 +133,6 @@ const Main = () => {
       </div>
       <div className='right-container'>
         {ShowComponent && ShowComponent}
-        {/* <showComponent /> */}
-        {/* <BasicInfo />
-        <ReceivedMessage />
-        <SendMessage />
-        <BannerList /> */}
       </div>
     </div>
   )
