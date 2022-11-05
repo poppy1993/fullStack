@@ -4,7 +4,7 @@ import "./index.scss";
 const Login = () => {
   return (
     <>
-      <div className="container">
+      <div className="loginContainer">
         <div className="loginWrap">
           <div className="login">
             <h2>Login</h2>

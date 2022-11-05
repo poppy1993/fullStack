@@ -1,0 +1,150 @@
+@import "../../common.scss";
+
+.detailPage {
+  width: $containerWidth;
+  color: #444;
+
+  .detailCard {
+    background-color: #fff;
+    border-radius: $borderRadius;
+    display: flex;
+    padding: 24px;
+    margin-bottom: 12px;
+
+    .left {
+      width: 520px;
+      background: #ccc;
+      margin-right: 24px;
+    }
+
+    .right {
+      flex: 1;
+      .price {
+        border-radius: $borderRadius;
+        background-color: #f5f5f5;
+        margin: 12px 0 24px;
+        width: 100%;
+        padding: 24px;
+        line-height: 40px;
+      }
+
+      .category,
+      .quantities {
+        padding: 0 24px;
+        margin-top: 12px;
+      }
+
+      .quantities {
+        display: flex;
+        align-items: center;
+        margin-top: 40px;
+
+        .label {
+          margin-right: 0;
+        }
+      }
+
+      .label {
+        display: inline-block;
+        width: 80px;
+        color: #666;
+        margin-right: 50px;
+      }
+
+      .text {
+        color: #888;
+      }
+    }
+  }
+
+  .descLeft {
+    width: 180px;
+    margin-right: 24px;
+    border: 1px solid $borderColor;
+
+    .descLeftTitle {
+      line-height: 32px;
+      background-color: #ebebeb;
+      color: #888;
+      text-align: center;
+      border-bottom: 1px solid $borderColor;
+    }
+
+    .descLeftContent {
+      padding: 24px 16px;
+      justify-content: space-between;
+    }
+
+    .descLeftItem {
+      display: flex;
+    }
+
+    .service,
+    .rate,
+    .item {
+      flex: 1;
+      text-align: center;
+      color: #666;
+      font-size: 12px;
+    }
+
+    .descBtnWrap {
+      margin-top: 20px;
+      display: flex;
+      gap: 12px;
+      font-size: 12px;
+
+      .visit,
+      .like {
+        text-align: center;
+        line-height: 26px;
+        border-radius: 3px;
+        cursor: pointer;
+        flex: 1;
+      }
+
+      .visit {
+        color: #fff;
+        background-color: #333;
+      }
+
+      .like {
+        background-color: #f5f5f5;
+        border: 1px solid #ccc;
+      }
+    }
+  }
+
+  .descRight {
+    flex: 1;
+  }
+
+  .descDetail {
+    padding: 12px;
+    border-radius: $borderRadius;
+    background-color: #f5f5f5;
+  }
+
+  .ant-tabs-nav {
+    margin-bottom: 0;
+  }
+
+  .ant-tabs-content-holder {
+    border: 1px solid $borderColor;
+    border-top: 0;
+    padding: 24px;
+  }
+
+  .ant-input-number-group-wrapper {
+    width: 120px;
+  }
+
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: #000;
+  }
+
+  .ant-btn-primary {
+    border-color: #000;
+    background: #000;
+  }
+}

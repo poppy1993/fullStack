@@ -1,0 +1,99 @@
+$containerWidth: 1280px;
+$menuWidth: 250px;
+$adWidth: 180px;
+$borderRadius: 10px;
+$borderColor: #ebebeb;
+$themeColor: #f76c10;
+
+.itemPage {
+  width: $containerWidth;
+  margin: 0 auto;
+
+  .category {
+    border-radius: $borderRadius;
+    border: 1px solid $borderColor;
+    background-color: #fff;
+    padding: 4px 20px;
+  }
+
+  .categoryRow {
+    display: flex;
+  }
+
+  .categoryLabel {
+    width: 80px;
+    margin-right: 12px;
+    text-transform: capitalize;
+  }
+
+  .categoryItem {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .categoryCell {
+    padding: 12px;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+  }
+
+  .categoryCell:hover,
+  .categoryCell.active {
+    border-bottom: 1px solid $themeColor;
+    color: $themeColor;
+  }
+
+  .itemHeader {
+    display: flex;
+    margin: -12px -37px 0;
+    line-height: 40px;
+    background-color: #ccc;
+    border-top-left-radius: $borderRadius;
+    border-top-right-radius: $borderRadius;
+    border: 1px solid $borderColor;
+    border-top: 0;
+    padding: 0 36px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .itemHeaderLeft {
+    display: flex;
+
+    span {
+      margin-right: 24px;
+    }
+
+    .ant-input-number {
+      width: 60px;
+    }
+  }
+
+  .ant-pagination-prev,
+  .ant-pagination-next {
+    height: auto !important;
+  }
+
+  .item {
+    margin-top: 24px;
+    background-color: #fff;
+    border-radius: $borderRadius;
+    border: 1px solid $borderColor;
+    background-color: #fff;
+    padding: 4px 20px;
+
+    .ant-list-header {
+      border-bottom: 0 !important;
+    }
+
+    .ant-list-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .itemCell {
+      border-bottom: 0 !important;
+    }
+  }
+}

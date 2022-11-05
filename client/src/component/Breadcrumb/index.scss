@@ -1,0 +1,11 @@
+.breadcrumb {
+  display: flex;
+  background: #fff;
+  padding: 6px 12px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  > span {
+    margin-right: 12px;
+    font-weight: bold;
+  }
+}

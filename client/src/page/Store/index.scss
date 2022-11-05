@@ -1,0 +1,90 @@
+@import "../../common.scss";
+$storeInfoWidth: 250px;
+
+.storeContainer {
+  margin: -24px;
+  .storeNavWrap {
+    line-height: 40px;
+    background-color: #333;
+    color: #fff;
+  }
+
+  .storeNav {
+    width: $containerWidth;
+    margin: 0 auto;
+  }
+
+  .storeNavItem {
+    padding: 0 12px;
+    width: 56px;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .storePage {
+    width: $containerWidth;
+    margin: 24px auto;
+    display: flex;
+  }
+
+  .storeHeader {
+    width: 100%;
+    line-height: 32px;
+    border-radius: 16px;
+    color: #ccc;
+    text-align: center;
+    background-color: #000;
+  }
+
+  .storeDetail {
+    font-size: 12px;
+    padding: 12px;
+    p {
+      margin-bottom: 4px;
+      margin-top: 4px;
+    }
+  }
+
+  .storeInfoBottom {
+    margin-top: 60px;
+  }
+}
+
+.storeInfo {
+  border-radius: $borderRadius;
+  background-color: #fff;
+  padding: 24px;
+  width: $storeInfoWidth;
+  margin-right: 24px;
+}
+
+.storeMain {
+  width: calc(100% - $storeInfoWidth - 24px);
+  border-radius: $borderRadius;
+  background-color: #fff;
+  padding: 24px;
+  margin-right: 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .storeItem {
+    min-width: 200px;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: $borderRadius;
+    margin: 0 8px;
+  }
+
+  .storeItemImg {
+    height: 168px;
+    background-color: #ccc;
+  }
+
+  .storeItemInfo {
+    margin-top: 20px;
+
+    div {
+      color: #666;
+    }
+  }
+}

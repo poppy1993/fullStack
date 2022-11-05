@@ -1,0 +1,214 @@
+$containerWidth: 1280px;
+$menuWidth: 250px;
+$adWidth: 180px;
+$borderRadius: 10px;
+$borderColor: #ebebeb;
+
+.homePage {
+  width: $containerWidth;
+  margin: 0 auto;
+
+  .category {
+    border-radius: $borderRadius;
+    display: flex;
+    margin-bottom: 24px;
+    border: 1px solid $borderColor;
+    background: #fff;
+  }
+
+  .header {
+    line-height: 40px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-top-left-radius: 10px;
+  }
+
+  .menu {
+    min-width: $menuWidth;
+
+    .menuItemWrap {
+      line-height: 54px;
+      color: #999;
+      cursor: pointer;
+      padding: 0 12px;
+      transition: all 0.05s;
+    }
+
+    .menuItem {
+      border-bottom: 1px solid $borderColor;
+    }
+
+    .menuItemWrap:nth-last-child(1) .menuItem {
+      border: none;
+    }
+
+    .menuIcon {
+      padding: 6px;
+      border-radius: 4px;
+      font-size: 20px;
+      border: 1px solid #999;
+      background-color: #f0f2f5;
+    }
+
+    .menuName {
+      margin-left: 8px;
+    }
+
+    .menuItemWrap:hover,
+    .menuItemWrap.active {
+      background-color: #333;
+      color: #fff;
+
+      .menuItem {
+        border-bottom: 1px solid #333;
+      }
+
+      .menuIcon,
+      .menuName {
+        color: #fff;
+      }
+
+      .menuIcon {
+        border: 1px solid #fff;
+        background-color: #333;
+      }
+    }
+  }
+
+  .carousel {
+    width: calc($containerWidth - $menuWidth);
+    height: 314px;
+  }
+
+  .carouselItem {
+    width: 100%;
+    height: 314px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f76c10;
+  }
+
+  .wrap {
+    display: flex;
+    gap: 24px;
+  }
+
+  .left {
+    width: calc($containerWidth - $adWidth);
+  }
+
+  h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 0;
+    margin-right: 24px;
+  }
+
+  .news {
+    line-height: 60px;
+    border-radius: $borderRadius;
+    background-color: #fff;
+    border: 1px solid $borderRadius;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  .newsText {
+    flex: 1;
+    display: flex;
+    color: #666;
+    justify-content: space-between;
+    .text {
+      max-width: 640px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .price {
+      margin-left: 8px;
+    }
+  }
+
+  .item {
+    background-color: #fff;
+    border-radius: $borderRadius;
+    padding: 12px;
+  }
+
+  .itemTitle {
+    position: relative;
+    padding-left: 12px;
+    margin-bottom: 12px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 4px;
+      height: 20px;
+      background-color: #333;
+      top: 9px;
+      left: 0;
+    }
+  }
+
+  .itemWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .itemCard {
+    width: 24%;
+    margin-bottom: 24px;
+    border: 1px solid $borderColor;
+    padding: 18px;
+    display: flex;
+    cursor: pointer;
+
+    &:hover {
+      border-color: transparent;
+      box-shadow: 1px 1px 10px #ccc;
+    }
+
+    .img {
+      width: 48px;
+      height: 48px;
+      margin-right: 18px;
+      background: #ccc;
+    }
+
+    .itemInfo {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .name {
+        color: #000;
+        font-weight: bold;
+        font-size: 18px;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 140px;
+        text-overflow: ellipsis;
+      }
+
+      .price {
+        color: #666;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .ads {
+    width: $adWidth;
+    text-align: center;
+    background-color: #f76c10;
+    color: #fff;
+    border-radius: $borderRadius;
+  }
+}
